@@ -8,7 +8,7 @@ const app = express()
 import * as url from 'url'
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const __pubdir = join(__dirname, process.env.PUBDIR)
-const port =  process.env.PORT;
+const port =  3030;
 
 // generate a safe, relative path for use in urls
 const relpath = (path) => {
