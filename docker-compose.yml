@@ -1,14 +1,15 @@
 version: '3'
 services:
   app:
-    image: node:latest
-    container_name: app_main
+    image: cdn
+    container_name: cdn
     restart: always
-    command: sh -c "yarn install && yarn start"
     ports:
-      - 8000:8000
+      - 3030:3030
     working_dir: /app
     volumes:
       - ./:/app
-    environment:
-      PUBDIR: /
+      - type: bind
+        source: ./folder
+        target: /app/public
+      
