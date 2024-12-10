@@ -50,7 +50,8 @@ app.get('*', (req, res) => {
         }
         return res.sendStatus(404)
     }
-    catch {
+    catch (err) {
+        console.log(err)
         return res.sendStatus(500)
     }
 })
