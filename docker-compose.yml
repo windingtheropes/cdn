@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: cdn
+    image: windingtherope/cdn:latest
     container_name: cdn
     restart: always
     ports:
