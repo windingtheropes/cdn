@@ -1,13 +1,11 @@
 import express, { query } from "express";
 import { readdirSync, lstatSync, existsSync, fstatSync } from "fs";
 import { join, basename } from "path";
-import dotenv from "dotenv"
-dotenv.config()
 const app = express()
 
 import * as url from 'url'
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
-const __pubdir = join(__dirname, process.env.PUBDIR)
+const __pubdir = join(__dirname, "public")
 const port =  3030;
 
 // generate a safe, relative path for use in urls
